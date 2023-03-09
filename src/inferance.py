@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 import altair as alt
 from transformers import pipeline
@@ -6,17 +8,18 @@ from transformers import BertTokenizer, BertForSequenceClassification, AutoToken
 tokenizer = BertTokenizer.from_pretrained("alger-ia/dziribert_sentiment")
 model = BertForSequenceClassification.from_pretrained("alger-ia/dziribert_sentiment")
 
-model_path = "../models/classification_model"
+root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+model_path = os.path.join(root_path, "models", "classification_model")
 
-model = AutoModelForSequenceClassification.from_pretrained(model_path)
-tokenizer = AutoTokenizer.from_pretrained(model_path)
+model_path = "D:\Sentiment analysis of OMC feedbacks\models\classification_model"
 
+fine_tuned_model = AutoModelForSequenceClassification.from_pretrained(model_path)
+fine_tuned_tokenizer = AutoTokenizer.from_pretrained(model_path)
 
 def plot(nb_feedbacks):
     dict = {
         'Sentiment': ['positive', 'neutral', 'negative'],
         'Number of feedbacks': nb_feedbacks
-        
     }
     source = pd.DataFrame(dict)
     plt = alt.Chart(source).mark_bar().encode(
@@ -104,3 +107,4 @@ def classify_text(text):
     probs = outputs.logits.softmax(dim=1)
     pred = probs.argmax().item()
     return pred
+print(classify_text('Hello world!'))

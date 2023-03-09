@@ -3,6 +3,7 @@ import altair as alt
 import pandas as pd
 from inferance import sent_analy_daridja_text, sent_analy_not_daridja_text, sent_analy_daridja_file, sent_analy_not_daridja_file, sent_analy_mixed_language_file, sent_analy_mixed_language_text
 
+# from ..src.inferance import sent_analy_daridja_text, sent_analy_not_daridja_text, sent_analy_daridja_file, sent_analy_not_daridja_file, sent_analy_mixed_language_file, sent_analy_mixed_language_text
 
 def plot_dict(dict):
     source = pd.DataFrame(dict)
@@ -39,7 +40,6 @@ def sentiment_file(file_input, dar, ar, fr, en):
 
 with gr.Blocks() as demo:
     gr.Markdown("# Sentiment Analysis")
-    
     with gr.Tab("Mixed language sentiment classifier"):
         with gr.Column():
             gr.Markdown("## Select the languages")
@@ -53,7 +53,7 @@ with gr.Blocks() as demo:
         analyze_button1 = gr.Button(label="Analyze")
         result_ml = gr.Plot(label="Sentiment analysis")
         analyze_button1.click(fn=sentiment_file, inputs=[file_input, dar, ar, fr, en], outputs=[file_output, result_ml])
-    
+
     with gr.Tab("Specific input classifier"):
         with gr.Column():
             gr.Markdown("## Select the languages")
@@ -66,5 +66,6 @@ with gr.Blocks() as demo:
             output = gr.Textbox(label="Result")
         analyze_button2 = gr.Button(label="Analyze")
         analyze_button2.click(fn = sentiment, inputs=[text_input, dar, ar, fr, en], outputs=output)
+
 
 demo.launch()
