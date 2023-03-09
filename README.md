@@ -26,7 +26,7 @@ The zero-shot classifier used in this project is based on facebook/bart-large-mn
 The dashboard for this project is developed using Gradio, a user-friendly interface that allows users to easily interact with the sentiment analysis model. It provides a simple and intuitive way for users to upload a file and select the language for feedback analysis.
 
 Once the user selects a language and uploads a file, the sentiment analysis model classifies the feedback into positive, negative, or neutral categories. The results are displayed in a CSV file and a chart that shows the number of positive, negative, and neutral feedbacks.
- 
+
 <img src="Dashboard.png">
 
 The user can also run the model in one specific example using specific input classifier where he will type his text and the model will classify it.
@@ -34,7 +34,7 @@ The user can also run the model in one specific example using specific input cla
 <img src="Dashboard2.png">
 
 ## Evaluation Results
-The sentiment analysis model was evaluated using a test dataset to measure its accuracy, precision, recall, F1 score, and loss. The evaluation results are as follows:
+The classification model of the daridja and not_daridja of the feedback was evaluated using a test dataset to measure its accuracy, precision, recall, F1 score, and loss. The evaluation results are as follows:
 
 - **Accuracy:** 0.973939393939394
 - **Precision score:** 0.9745353509366887
