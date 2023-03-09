@@ -25,9 +25,10 @@ The zero-shot classifier used in this project is based on facebook/bart-large-mn
 ## Dashboard
 The dashboard for this project is developed using Gradio, a user-friendly interface that allows users to easily interact with the sentiment analysis model. It provides a simple and intuitive way for users to upload a file and select the language for feedback analysis.
 
-Once the user selects a language and uploads a file, the sentiment analysis model classifies the feedback into positive, negative, or neutral categories. The results are displayed in a CSV file and a chart that shows the number of positive, negative, and neutral feedbacks. The user can also run the model in one specific example using specific input classifier where he will type his text and the model will classify it.
+Once the user selects a language and uploads a file, the sentiment analysis model classifies the feedback into positive, negative, or neutral categories. The results are displayed in a CSV file and a chart that shows the number of positive, negative, and neutral feedbacks. 
 <img src="Dashboard.png">
-
+The user can also run the model in one specific example using specific input classifier where he will type his text and the model will classify it.
+<img src="Dashboard2.png">
 ## Evaluation
 
 
