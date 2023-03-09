@@ -105,4 +105,3 @@ def classify_text(text):
     probs = outputs.logits.softmax(dim=1)
     pred = probs.argmax().item()
     return pred
-print(classify_text('Hello world!'))
