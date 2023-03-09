@@ -1,7 +1,7 @@
 import gradio as gr
 import altair as alt
 import pandas as pd
-from inferance import sent_analy_daridja_text, sent_analy_not_daridja_text, sent_analy_daridja_file, sent_analy_not_daridja_file, sent_analy_mixed_language_file, sent_analy_mixed_language_text
+# from inferance import sent_analy_daridja_text, sent_analy_not_daridja_text, sent_analy_daridja_file, sent_analy_not_daridja_file, sent_analy_mixed_language_file, sent_analy_mixed_language_text
 
 from ..src.inferance import sent_analy_daridja_text, sent_analy_not_daridja_text, sent_analy_daridja_file, sent_analy_not_daridja_file, sent_analy_mixed_language_file, sent_analy_mixed_language_text
 
