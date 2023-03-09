@@ -11,8 +11,6 @@ model = BertForSequenceClassification.from_pretrained("alger-ia/dziribert_sentim
 root_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 model_path = os.path.join(root_path, "models", "classification_model")
 
-model_path = "D:\Sentiment analysis of OMC feedbacks\models\classification_model"
-
 fine_tuned_model = AutoModelForSequenceClassification.from_pretrained(model_path)
 fine_tuned_tokenizer = AutoTokenizer.from_pretrained(model_path)
 

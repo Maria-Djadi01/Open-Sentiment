@@ -1,0 +1,8 @@
+gradio
+numpy
+pandas
+altair
+torch
+dataset
+evaluate
+transformers
