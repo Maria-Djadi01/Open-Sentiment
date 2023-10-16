@@ -20,7 +20,7 @@ The next step in this project is to perform sentiment analysis on each feedback 
 
 For feedbacks labeled as not Daridja like frensh, arabic or english, we use a zero-shot classifier that can perform sentiment analysis. A zero-shot classifier takes as input a text and some candidate labels (positive, negative, neutral) and outputs a probability score for each label indicating how likely it matches with the text.
 
-The zero-shot classifier used in this project is based on facebook/bart-large-mnli model which was trained on MultiNLI dataset which contains natural language inference examples in English.
+The zero-shot classifier used in this project is based on facebook/bart-large-mnli model.
 
 ## Dashboard
 The dashboard for this project is developed using Gradio, a user-friendly interface that allows users to easily interact with the sentiment analysis model. It provides a simple and intuitive way for users to upload a file and select the language for feedback analysis.
